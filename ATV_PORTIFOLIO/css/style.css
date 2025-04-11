@@ -18,6 +18,12 @@ a {
 p{
   line-height: 130%;
 }
+section h2 {
+  text-align: center;
+}
+img{
+  max-width: 100%;
+}
 /* ==================================================
    ESPECIFICO
  ==================================================
@@ -66,4 +72,41 @@ section.posts ul li {
 section.posts ul li h3 {
   font-weight: bold;
   font-size: 1.2rem;
+}
+section.posts li p {
+  margin: 20px 0 0 0;
+}
+section.works {
+  padding: 10px;
+}
+section.works ul li {
+  margin: 15px 0;
+}
+section.works ul li h3{
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 130%;
+}
+section.works ul li p {
+  margin: 15px 0;
+}
+section.works ul li p.info {
+  color: #8695A4;
+}
+section.works ul li p.info span {
+  color: white;
+  background-color: #142850;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+section.works ul {
+  border-bottom: 1px solid #8695A4;
+}
+footer p {
+  text-align: center;
+}
+footer a {
+  font: size 2.3em;
+  margin: 10px 15px;
 }
