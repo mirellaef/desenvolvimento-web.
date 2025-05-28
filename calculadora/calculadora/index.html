@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução JavaScript</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section>
+        <h3>
+            <span id="preco_diaria">R$ 620</span>
+            <span class="unit">noite</span>
+        </h3>
+        <form action="#" class="dates-form">
+            <div class="dates-group">
+                <p>
+                    <label for="checkin">CHECK-IN</label>
+                    <input type="date" id="checkin">
+                </p>
+                <p>
+                    <label for="checkout">CHECK-OUT</label>
+                    <input type="date" id="checkout">
+                </p>
+            </div>
+            <p class="guests">
+                <label for="hospedes">HÓSPEDES</label>
+                <select id="hospedes">
+                    <option value="1">1 hóspede</option>
+                    <option value="2">2 hóspedes</option>
+                    <option value="3">3 hóspedes</option>
+                    <option value="4">4 hóspedes</option>
+                </select>
+            </p>
+            <p><button type="submit">Reservar</button></p>
+        </form>
+
+        <form class="summary-form">
+            <p class="note">Você ainda não será cobrado</p>
+            <ul class="details">
+                <li>
+                    <span id="subtotal">R$ 0,00 x 0 noites</span>
+                    <span id="valor_sub">R$ 0,00</span>
+                </li>
+                <li>
+                    <span>Taxa de limpeza</span>
+                    <span id="taxa_limpeza">R$ 120,00</span>
+                </li>
+                <li>
+                    <span>Taxa de serviço do Airbnb</span>
+                    <span id="taxa_servico">R$ 0,00</span>
+                </li>
+                <li class="total-line">
+                    <span>Total sem impostos</span>
+                    <span id="total">R$ 0,00</span>
+                </li>
+            </ul>
+        </form>
+    </section>
+
+    <script>
+        var checkin = document.getElementById("checkin");
+        var checkout = document.getElementById("checkout");
+        var guestsSelect = document.getElementById("hospedes");
+        var precoDiariaEl = document.getElementById("preco_diaria");
+        var subtotalEl = document.getElementById("subtotal");
+        var valorSubEl = document.getElementById("valor_sub");
+        var taxaLimpezaEl = document.getElementById("taxa_limpeza");
+        var taxaServEl = document.getElementById("taxa_servico");
+        var totalEl = document.getElementById("total");
+
+        function recalcula() {
+            var dataEntrada = new Date(checkin.value);
+            var dataSaida = new Date(checkout.value);
+            var diffMs = dataSaida - dataEntrada;
+            var diarias = diffMs / 86400000;
+            if (isNaN(diarias) || diarias <= 0) {
+                subtotalEl.innerText = "R$ 0,00 x 0 noites";
+                valorSubEl.innerText = "R$ 0,00";
+                taxaServEl.innerText = "R$ 0,00";
+                totalEl.innerText = "R$ 0,00";
+                return;
+            }
+
+            var numHospedes = parseInt(guestsSelect.value, 10);
+
+            var precoText = precoDiariaEl.innerText.substring(2).replace(",", ".");
+            var precoNum = parseFloat(precoText);
+
+            var acrescimo = 0.2 * (numHospedes - 1);
+            var precoFinalPorDia = precoNum * (1 + acrescimo);
+
+            var valorDiarias = precoFinalPorDia * diarias;
+            subtotalEl.innerText =
+                "R$ " + precoFinalPorDia.toFixed(2).replace(".", ",") +
+                " x " + diarias + (diarias === 1 ? " noite" : " noites");
+            valorSubEl.innerText = "R$ " + valorDiarias.toFixed(2).replace(".", ",");
+
+            var taxaServNum = 0.15 * valorDiarias;
+            taxaServEl.innerText = "R$ " + taxaServNum.toFixed(2).replace(".", ",");
+
+            var taxaLimpezaNum = parseFloat(
+                taxaLimpezaEl.innerText.substring(2).replace(".", "").replace(",", ".")
+            );
+
+            var totalNum = valorDiarias + taxaLimpezaNum + taxaServNum;
+            totalEl.innerText = "R$ " + totalNum.toFixed(2).replace(".", ",");
+        }
+
+        checkin.addEventListener("change", recalcula);
+        checkout.addEventListener("change", recalcula);
+        guestsSelect.addEventListener("change", recalcula);
+    </script>
+
+
+</body>
+
+</html>
