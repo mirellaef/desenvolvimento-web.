@@ -1,0 +1,59 @@
+#pg1 {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 50px 0px 50px 0px;
+  margin: 3% 3% 20% 3%;
+  border-radius: 20px;
+  border: none;
+}
+
+#pg1 #Iniciar {
+  background-color: rgb(160, 201, 255);
+  border-radius: 20px;
+  border: none;
+  margin: 10% 0 10% 0;
+  padding: 20px 20px 20px 20px;
+}
+
+#pg1 {
+  
+}
+
+#pg2 {
+  display: none;
+  text-align: center;
+  background-color: rgb(61, 32, 32);
+}
+
+#pg2 ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  justify-content: center;
+}
+
+#pg2 ul li img {
+  height: 20vw;
+  padding: 10px 10px 10px 10px;
+}
+
+#pg2 h1{
+  font-size: larger;
+  padding: 20px 10px 10px 10px;
+}
+
+span.timer {
+  background-color: rgb(56, 32, 32);
+  border: none;
+  border-radius: 20px;
+  padding: 20px 10px 10px 10px;
+}
+
+#pg2 p {
+  font-size: larger;
+  width: 100%;
+  border-bottom: 1px solid #412323;
+  margin: 20px 0px 8vw 0px;
+}
