@@ -29,6 +29,199 @@ header {
   padding: 2vw 8vw 2vw 8vw;
 }
 
+section.banner {
+  background: url(../Imagens/celular.png) no-repeat right, linear-gradient(rgba(225, 244, 255, 0.5),rgba(225, 244, 255, 0.5)), url(../Imagens/background-footer.webp);
+  padding: 10vw 8vw;
+  background-size: auto 90%, auto, auto;
+}
+
+section.banner .text {
+  width: 30%;
+  color: gray;
+}
+
+section.banner h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(37, 43, 67);
+}
+
+section.banner p {
+  margin: 20px 0px;
+}
+
+section.banner p button {
+  margin: 0px 5px 0px 5px;
+}
+
+section.banner p button {
+  background: black;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.3rem;
+}
+
+/* */
+
+section.inter div.tex {
+  text-align: center;
+  width: 50%;
+  margin: 10px auto 100px auto;
+  padding: auto;
+}
+
+section.inter h2 {
+  font-size: 1.3rem;
+  font-size: bold;
+  padding-top: 80px;
+  color: #252B42;
+}
+ 
+section.inter p {
+  color: gray;
+  font-size: 0.9rem;
+  padding-top: 30px;
+}
+
+section.inter div.img {
+  padding: 0px 0px 200px 180px;
+}
+
+section.inter div.lista{
+  display: flex;
+}
+
+section.inter ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 6rem;
+}
+
+section.inter div ul li {
+  display: grid;
+  margin: 30px;
+  width: 300px;
+}
+
+section.inter div ul li h4 {
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 18pt;
+}
+
+section.inter div ul li p {
+  font-size: 14pt;
+}
+
+section.inter div.lista ul li span {
+  color: #FBBC05;
+  background-color: #dbfaff;
+  border-radius: 5px;
+  padding: 20px;
+  width: 22px;
+  display: flex;
+}
+
+section.download {
+  padding: 100px 150px 100px 150px;
+  margin: 0 170px 0 170px;
+  border-radius: 30px;
+  border: none;
+  background: url(../Imagens/celular.png) no-repeat, url(../Imagens/celular.png) no-repeat, #FBBC05;
+  background-size: 25% auto, 25% auto, auto;
+  background-position: 60%  270%, 90% -270%;
+}
+
+section.download h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  
+}
+
+section.download p {
+  color: white;
+  font-size: 0.8rem;
+  padding: 40px 0 90px 0;
+  width: 50%;
+}
+
+section.download .Getstart {
+  background: #252B42;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.9rem;
+}
+
+section.service {
+  padding: 20vw 5vw;
+  display: flex;
+}
+
+section.service img {
+  padding: 20px 20px;
+  height: 20%;
+}
+
+section.service div h4 {
+  padding: 12px 100px 10px 0px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+section.service h4 {  
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+section.service p {
+  font-size: 0.8rem;
+}
+
+section.service ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 0 15vw;
+}
+
+section.service ul li p {
+  padding: 40px 20px;
+}
+
+section.service ul li {
+  width: 40%;
+  margin: 10px 5%;
+  background-color: #ebe8e8;
+}
+
+section.service ul li:hover {
+  background-color: #FBBC05;
+}
+
+section.contact {
+  text-align: center;
+}
+
+section.contact h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+section.contact p {
+  width: 40%;
+  font-size: 0.8rem;
+  padding: 20px 10px 5  0px 30vw;
+  
+  
+}
+
 @media (min-width: 1024px) {
 header nav {
   display: flex;
