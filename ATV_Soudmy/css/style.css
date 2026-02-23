@@ -146,7 +146,22 @@ section.imagem-web h4 {
   margin-bottom: 20px ;
   font-size: 21pt;  
 }
+/* Troque onde houver o fundo verde claro */
+section.Produto, footer {
+  background-color: #f0f4ff; /* Um azul bem clarinho, quase cinza */
+}
 
+/* Troque a cor de destaque (botões e Sign Up) */
+.Sign, .banner button {
+  background-color: #6366f1; /* Indigo moderno */
+  color: white;
+}
+
+/* Efeito hover para ficar profissional */
+.Sign:hover, .banner button:hover {
+  background-color: #4f46e5;
+  transition: 0.3s;
+}
 .imagem {
   text-align: center;
   background-color: #fff;
@@ -242,4 +257,5 @@ footer a {
   footer ul {
     display: flex;
   }
+
 }
